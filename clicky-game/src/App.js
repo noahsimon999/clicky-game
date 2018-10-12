@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import React, {Component} from 'react';
 import "./App.css";
-import heroes from "./heroes/json";
+import heroes from "./heroes.json";
 import Wrapper from "./components/Wrapper";
 import Nav from "./components/Nav";
 import Title from "./components/Title";
@@ -37,7 +37,7 @@ class App extends Component {
         unselectedHeroes: heroes
       });
     } else {
-      const newHero = this.state.unselectedHeroes.filter(item => item.name ! == name);
+      const newHero = this.state.unselectedHeroes.filter(item => item.name !== name);
 
       this.setState({
           message: "You guessed correctly!",
